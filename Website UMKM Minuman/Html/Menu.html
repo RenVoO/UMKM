@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedai Minuman</title>
+    <link rel="stylesheet" href="../Style/style.css">
+    <script src="./JavaScript/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-dark bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand text-dark" href="../landingpage.html">Kedai Minuman</a>
+            <div class="ms-auto">
+                <a class="text-dark p-2" href="#">Menu</a>
+                <a class="text-dark p-2" href="../Html/About.html">Tentang Kami</a>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar Section -->
+
+    <!-- Menu Section -->
+    <div class="col-sm-9 mt-5 my-4 py-4 mx-auto">
+        <div class="d-flex justify-content-between align-items-center p-3" style="width: 100%; height: 50px;">
+            <p class="mb-0 fw-semibold" style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif; color: white;">
+                List Menu
+            </p>
+        </div>
+
+        <div class="p-4 border border-0 shadow" style="max-height: 580px; overflow-y: scroll; background-color: #f5f5f5; border-radius: 20px;" id="boxItem">
+            <div class="row" id="itemContainer"></div>
+            <div class="row ms-1" id="itemProduct">
+              
+
+                <div class="col-lg-2 col-md-3 col-sm-6 p-0" style="margin: 10px;" id="itemProduct">
+                    <button onclick="tambahpesanan('pancake', 1, 25000)" class="item card-body p-3 border-0 shadow rounded-3" type="button" style="background-color: #f5f5f5;" id="item">
+                        <img class="card-img mb-1 rounded-2" src="https://kopialamak.com/wp-content/uploads/2020/01/kopi-alamak-cappuccino.jpg" alt="Pancake Image">
+                        <h5 class="card-title product-name" style="font-size: small; text-align: start;">Kopi Cappucino</h5>
+                    </button>
+                </div>
+             
+
+                <div class="col-lg-2 col-md-3 col-sm-6 p-0" style="margin: 10px;" id="itemProduct">
+                    <button onclick="tambahpesanan('Pie', 1, 30000)" class="item card-body p-3 border-0 shadow rounded-3" type="button" style="background-color: #f5f5f5;" id="item">
+                        <img class="card-img mb-1 rounded-2" src="https://www.tehsariwangi.com/uploads/ar/article/411/534206a1a98f74d0dd5b195c88a31dc3.jpg" alt="Pie Image">
+                        <h5 class="card-title product-name" style="font-size: small; text-align: start;">Es Teh Manis</h5>
+                    </button>
+                </div>
+                
+                <div class="col-lg-2 col-md-3 col-sm-6 p-0" style="margin: 10px;" id="itemProduct">
+                    <button onclick="tambahpesanan('Pie', 1, 30000)" class="item card-body p-3 border-0 shadow rounded-3" type="button" style="background-color: #f5f5f5;" id="item">
+                        <img class="card-img mb-1 rounded-2" src="https://www.fourthestatecoffee.com/wp-content/uploads/2020/05/gallery8.jpg" alt="Pie Image">
+                        <h5 class="card-title product-name" style="font-size: small; text-align: start;">Kopi Espresso</h5>
+                    </button>
+                </div>
+                
+                <div class="col-lg-2 col-md-3 col-sm-6 p-0" style="margin: 10px;" id="itemProduct">
+                    <button onclick="tambahpesanan('Pie', 1, 30000)" class="item card-body p-3 border-0 shadow rounded-3" type="button" style="background-color: #f5f5f5;" id="item">
+                        <img class="card-img mb-1 rounded-2" src="https://ik.imagekit.io/nibble/public/uploads/roti_bakar_di_jakarta_00_c4afd448bc_SeB1X57ea.jpg" alt="Pie Image">
+                        <h5 class="card-title product-name" style="font-size: small; text-align: start;">Roti Bakar Coklat</h5>
+                    </button>
+                </div>
+                
+                <div class="col-lg-2 col-md-3 col-sm-6 p-0" style="margin: 10px;" id="itemProduct">
+                    <button onclick="tambahpesanan('Pie', 1, 30000)" class="item card-body p-3 border-0 shadow rounded-3" type="button" style="background-color: #f5f5f5;" id="item">
+                        <img class="card-img mb-1 rounded-2" src="https://2.bp.blogspot.com/-djJFyUDz-D4/VkKq4tQzw3I/AAAAAAAAABs/0n0H0-TuRm4/s1600/BakersJoy-tip_5.15.jpg" alt="Pie Image">
+                        <h5 class="card-title product-name" style="font-size: small; text-align: start;">Kentang Goreng</h5>
+                    </button>
+                </div>
+                
+                <div class="col-lg-2 col-md-3 col-sm-6 p-0" style="margin: 10px;" id="itemProduct">
+                    <button onclick="tambahpesanan('Pie', 1, 30000)" class="item card-body p-3 border-0 shadow rounded-3" type="button" style="background-color: #f5f5f5;" id="item">
+                        <img class="card-img mb-1 rounded-2" src="https://awsimages.detik.net.id/community/media/visual/2021/01/08/kocak-pesan-es-jeruk-hangat-pembeli-ini-langsung-bikin-penjual-emosi.jpeg?w=2736" alt="Pie Image">
+                        <h5 class="card-title product-name" style="font-size: small; text-align: start;">Es Jeruk</h5>
+                    </button>
+                </div>
+                
+                <div class="col-lg-2 col-md-3 col-sm-6 p-0" style="margin: 10px;" id="itemProduct">
+                    <button onclick="tambahpesanan('Pie', 1, 30000)" class="item card-body p-3 border-0 shadow rounded-3" type="button" style="background-color: #f5f5f5;" id="item">
+                        <img class="card-img mb-1 rounded-2" src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/a6abe3a2-90f6-4223-8999-34395000e7bb_Go-Biz_20220628_181146.jpeg?auto=format" alt="Pie Image">
+                        <h5 class="card-title product-name" style="font-size: small; text-align: start;">Es Coklat</h5>
+                    </button>
+                </div>
+                
+                <div class="col-lg-2 col-md-3 col-sm-6 p-0" style="margin: 10px;" id="itemProduct">
+                    <button onclick="tambahpesanan('Pie', 1, 30000)" class="item card-body p-3 border-0 shadow rounded-3" type="button" style="background-color: #f5f5f5;" id="item">
+                        <img class="card-img mb-1 rounded-2" src="https://img-z.okeinfo.net/library/images/2018/08/27/bmi8uwankpfd8f3xcl6f_16777.jpg" alt="Pie Image">
+                        <h5 class="card-title product-name" style="font-size: small; text-align: start;">Nasi Bakar Cumi Asin</h5>
+                    </button>
+                </div>
+                
+                <div class="col-lg-2 col-md-3 col-sm-6 p-0" style="margin: 10px;" id="itemProduct">
+                    <button onclick="tambahpesanan('Pie', 1, 30000)" class="item card-body p-3 border-0 shadow rounded-3" type="button" style="background-color: #f5f5f5;" id="item">
+                        <img class="card-img mb-1 rounded-2" src="https://mesinkopi.me/wp-content/uploads/2018/08/AMERICANO.jpg" alt="Pie Image">
+                        <h5 class="card-title product-name" style="font-size: small; text-align: start;">Kopi Americano</h5>
+                    </button>
+                </div>
+                
+                <div class="col-lg-2 col-md-3 col-sm-6 p-0" style="margin: 10px;" id="itemProduct">
+                    <button onclick="tambahpesanan('Pie', 1, 30000)" class="item card-body p-3 border-0 shadow rounded-3" type="button" style="background-color: #f5f5f5;" id="item">
+                        <img class="card-img mb-1 rounded-2" src="https://www.kitchensanctuary.com/wp-content/uploads/2020/07/Nasi-Goreng-square-FS-57.jpg" alt="Pie Image">
+                        <h5 class="card-title product-name" style="font-size: small; text-align: start;">Nasi Goreng</h5>
+                    </button>
+                </div>
+                
+                <div class="col-lg-2 col-md-3 col-sm-6 p-0" style="margin: 10px;" id="itemProduct">
+                    <button onclick="tambahpesanan('Pie', 1, 30000)" class="item card-body p-3 border-0 shadow rounded-3" type="button" style="background-color: #f5f5f5;" id="item">
+                        <img class="card-img mb-1 rounded-2" src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/98507ec0-fcab-4bfc-9db5-6a46c857d636_Go-Biz_20230214_014441.jpeg?auto=format" alt="Pie Image">
+                        <h5 class="card-title product-name" style="font-size: small; text-align: start;">Indomie Bangladesh</h5>
+                    </button>
+                </div>
+                
+                <div class="col-lg-2 col-md-3 col-sm-6 p-0" style="margin: 10px;" id="itemProduct">
+                    <button onclick="tambahpesanan('Pie', 1, 30000)" class="item card-body p-3 border-0 shadow rounded-3" type="button" style="background-color: #f5f5f5;" id="item">
+                        <img class="card-img mb-1 rounded-2" src="https://www.teahub.io/photos/full/188-1885936_coffee-latte-latte-art-espresso-cup-drink-cafe.jpg" alt="Pie Image">
+                        <h5 class="card-title product-name" style="font-size: small; text-align: start;">Kopi Latte</h5>
+                    </button>
+                </div>
+                
+                <div class="col-lg-2 col-md-3 col-sm-6 p-0" style="margin: 10px;" id="itemProduct">
+                    <button onclick="tambahpesanan('Pie', 1, 30000)" class="item card-body p-3 border-0 shadow rounded-3" type="button" style="background-color: #f5f5f5;" id="item">
+                        <img class="card-img mb-1 rounded-2" src="https://specialtycoffee.id/wp-content/uploads/2023/06/kopi-sange-2r.jpeg" alt="Pie Image">
+                        <h5 class="card-title product-name" style="font-size: small; text-align: start;">Kopi Sanger</h5>
+                    </button>
+                </div>
+                
+                <div class="col-lg-2 col-md-3 col-sm-6 p-0" style="margin: 10px;" id="itemProduct">
+                    <button onclick="tambahpesanan('Pie', 1, 30000)" class="item card-body p-3 border-0 shadow rounded-3" type="button" style="background-color: #f5f5f5;" id="item">
+                        <img class="card-img mb-1 rounded-2" src="https://cf.shopee.co.id/file/a94d539769cf51c2f20333740babe4c7" alt="Pie Image">
+                        <h5 class="card-title product-name" style="font-size: small; text-align: start;">Kopi Soda</h5>
+                    </button>
+                </div>
+                
+                <div class="col-lg-2 col-md-3 col-sm-6 p-0" style="margin: 10px;" id="itemProduct">
+                    <button onclick="tambahpesanan('Pie', 1, 30000)" class="item card-body p-3 border-0 shadow rounded-3" type="button" style="background-color: #f5f5f5;" id="item">
+                        <img class="card-img mb-1 rounded-2" src="https://cdn.yummy.co.id/content-images/images/20200605/YyCzUCqW8BILBsufX2G7ppexHyXzGPnR-31353931333332323536d41d8cd98f00b204e9800998ecf8427e.jpg?x-oss-process=image/format,webp" alt="Pie Image">
+                        <h5 class="card-title product-name" style="font-size: small; text-align: start;">Kopi Telor</h5>
+                    </button>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+    <!-- End Menu Section -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
